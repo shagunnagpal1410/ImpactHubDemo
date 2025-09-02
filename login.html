@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign-Up</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <div class="main">
+        <div class="box1">
+            <br>
+            <br>
+            <h2>Create Your Account Here!!!</h2>
+        </div>
+        <div class="box2">
+            <div class="randombox">
+                <br>
+                <a href="kahintohpahunchjaouge.com">Click Here! if account already exists!!!</a>
+                <br>
+                <br>
+            </div>
+            <h1 id="signup">Sign Up for impactHub</h1>
+            <br>
+            <form class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="i1" class="form-label">Enter Your Name</label>
+                    <input type="text" class="form-control" name="i1" id="i1" required minlength="2">
+                    <div class="invalid-feedback">
+                        Please enter a valid name (at least 2 characters).
+                    </div>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="i2" class="form-label">Enter Your Phone Number</label>
+                    <input type="tel" class="form-control" name="i2" id="i2" required pattern="[0-9]{10}">
+                    <div class="invalid-feedback">
+                        Please enter a valid 10-digit phone number.
+                    </div>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="i3" class="form-label">Email Id</label>
+                    <input type="email" class="form-control" name="i3" id="i3" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="i4" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="i4" id="i4" required minlength="8">
+                    <div class="invalid-feedback">
+                        Password must be at least 8 characters long.
+                    </div>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="i5" class="form-label">Enter Your DOB</label>
+                    <input type="date" class="form-control" name="i5" id="i5" required>
+                    <div class="invalid-feedback">
+                        Please enter your date of birth.
+                    </div>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label class="form-label">Are you from an NGO?</label>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ngo_status" id="ngo_yes" value="yes" required>
+                        <label class="form-check-label" for="ngo_yes">
+                            Yes, I'm from an NGO
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ngo_status" id="ngo_no" value="no" required>
+                        <label class="form-check-label" for="ngo_no">
+                            No, I'm not from an NGO
+                        </label>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please select whether you are from an NGO or not.
+                    </div>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="logincode.js"></script>
+    
+    <script>
+        // Bootstrap form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>

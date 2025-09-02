@@ -1,0 +1,162 @@
+body {
+    background-color: #ECFAE5;
+    margin: 0px;
+}
+.panel {
+    background-color: #B0DB9C;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.main {
+  font-size: large;
+  font-weight: bolder;
+  height: 2rem;
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  width: 25%; 
+  border: 1px solid black; 
+}
+#home {
+    background-color: #8cb977;
+    cursor: pointer;
+}
+#about:hover {
+    background-color: #8cb977;
+    border-color: rgb(234, 241, 236);
+    cursor:pointer;
+ }
+#Testimony:hover {
+    background-color: #8cb977;
+    border-color: rgb(234, 241, 236);
+    cursor: pointer;
+}
+#login:hover {
+    background-color: #8cb977;
+    border-color: rgb(234, 241, 236);
+    cursor: pointer;
+}
+.footer {
+    background-color: #CAE8BD;
+    height: 8rem;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+.details {
+    height: 40rem;
+}
+.footer1 {
+    font-size: medium;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.sec {
+   height: 2rem;
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  width: 50%; 
+}
+#contact {
+    padding-top: 1rem;
+    font-size: large;
+    height: 2rem;
+    width: 100%; 
+}
+#contact {
+    border-color: black;
+}
+a {
+    text-decoration: none;
+    color: #2c8701;
+}
+.ending{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+i {
+    color: black;
+    margin-right: 1rem;
+}
+.footer2 {
+    font-size: medium;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.sec2 {
+   height: 2rem;
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  width: 10%; 
+  opacity: 0.6;
+}
+.written {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.details {
+    padding-top: 20rem;
+    text-align: center;
+    font-size: larger;
+    color: black;
+    font-weight: bolder;
+}
+#insta {
+    padding-left: 30rem;
+}
+#Facebook {
+    padding-right: 30rem;
+}
+.sec2:hover {
+    opacity: 1;
+}
+.logo {
+    display: flex;
+  align-items: center;  
+  justify-content: center; 
+    height: 5.5rem;
+    width: 100%;
+}
+.mainlogo {
+    height: 5.5rem;
+    width: 7%;
+    background-image: url("image.png");
+    background-size: cover;
+}
+.tagline {
+    height: 5.5rem;
+  text-align: center;
+  width: 93%;
+  font-weight: bolder;
+  margin: auto;
+  background-color: #81DC93;
+}
+
+.tagline h3 {
+  font-size:x-large;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.tagline p {
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  font-style: italic;
+  padding-bottom: 1rem;
+}
+
+#logoimage{
+    margin: 1rem!important;
+    border-radius: 25%;
+}
+
