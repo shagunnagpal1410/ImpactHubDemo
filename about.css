@@ -1,0 +1,56 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #cbc9e3;
+}
+.main {
+    text-align: center;
+}
+.scroll-container {
+  overflow: hidden;       /* hide scrollbar */
+  width: 100%;
+}
+
+.scroll-content {
+  display: flex;
+  animation: scroll 20s linear infinite; 
+}
+
+.minibox {
+  width: 25%;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0; 
+  margin-right: 10px; 
+  border-color: #7A85C1;
+  border-radius: 1rem;
+  border-width: 0.5rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); 
+  }
+}
+.box2 {
+    text-align: left;
+}
+h1 {
+    color: #1A2A80;
+}
+h2 {
+    color: #1A2A80;
+}
+p {
+    color: #3B38A0;
+}
+ul {
+    color: #3B38A0;
+}
+li {
+    color: #3B38A0;
+}

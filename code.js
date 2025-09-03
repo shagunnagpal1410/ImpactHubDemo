@@ -34,4 +34,10 @@ function showQuote() {
 }
 showQuote();
 setInterval(showQuote, 5000);
+document.getElementById("login").addEventListener("click", function () {
+  window.location.href = "login.html";  // navigate to login page
+});
+document.getElementById("about").addEventListener("click", function () {
+  window.location.href = "about.html";  // navigate to login page
+});
 
