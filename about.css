@@ -7,13 +7,13 @@ body {
     text-align: center;
 }
 .scroll-container {
-  overflow: hidden;       /* hide scrollbar */
+  overflow: hidden;
   width: 100%;
 }
 
 .scroll-content {
   display: flex;
-  animation: scroll 20s linear infinite; 
+  animation: scroll 30s linear infinite;
 }
 
 .minibox {
@@ -21,11 +21,10 @@ body {
   height: 15rem;
   background-size: cover;
   background-position: center;
-  flex-shrink: 0; 
-  margin-right: 10px; 
-  border-color: #7A85C1;
+  flex-shrink: 0;
+  margin-right: 10px;
+  border: 0.25rem solid #7A85C1;
   border-radius: 1rem;
-  border-width: 0.5rem;
 }
 
 @keyframes scroll {
@@ -33,9 +32,10 @@ body {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%); 
+    transform: translateX(-100%); /* shift full width of original set */
   }
 }
+
 .box2 {
     text-align: left;
 }
