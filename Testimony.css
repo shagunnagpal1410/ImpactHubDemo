@@ -1,0 +1,56 @@
+body {
+    background-color: #FBF3B9;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.volunteer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.boxinsides1 {
+    background-color: #FFDCCC;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 2rem;
+
+}
+.boxinsides2 {
+    background-color: #d7d5ef;
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+    gap: 2rem;
+
+}
+.profile {
+    background-color: #FDB7EA;
+    height: 10vb;
+    width: 10vb;;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 50%;
+}
+.person2 {
+    background-color: #d7d5ef;
+    text-align: left;
+    font-size: medium;
+    font-weight: bolder;
+    padding-left: 3rem;
+}
+.person1{
+    background-color: #FFDCCC;
+    text-align: right;
+    font-size: medium;
+    font-weight: bolder;
+    padding-right: 3rem;
+}

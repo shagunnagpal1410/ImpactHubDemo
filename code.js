@@ -40,4 +40,6 @@ document.getElementById("login").addEventListener("click", function () {
 document.getElementById("about").addEventListener("click", function () {
   window.location.href = "about.html";  // navigate to login page
 });
-
+document.getElementById("Testimony").addEventListener("click", function () {
+  window.location.href = "Testimony.html";  // navigate to login page
+});
