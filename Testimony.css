@@ -16,6 +16,7 @@ body {
     flex-direction: column;
 }
 .boxinsides1 {
+    height: 10vb;
     background-color: #FFDCCC;
     display: flex;
     justify-content: left;
@@ -24,6 +25,7 @@ body {
 
 }
 .boxinsides2 {
+    height: 10vb;
     background-color: #d7d5ef;
     display: flex;
     justify-content: right;
@@ -41,16 +43,18 @@ body {
     border-radius: 50%;
 }
 .person2 {
-    background-color: #d7d5ef;
     text-align: left;
+    background-color: #d7d5ef;
     font-size: medium;
     font-weight: bolder;
     padding-left: 3rem;
+    height: 6vb;
 }
 .person1{
-    background-color: #FFDCCC;
     text-align: right;
+    background-color: #FFDCCC;
     font-size: medium;
     font-weight: bolder;
     padding-right: 3rem;
+    height: 6vb;
 }
