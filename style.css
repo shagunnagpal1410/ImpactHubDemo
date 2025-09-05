@@ -45,9 +45,6 @@ body {
     font-weight: bold;
     text-align: center;
 }
-.details {
-    height: 40rem;
-}
 .footer1 {
     font-size: medium;
     display: flex;
@@ -103,13 +100,6 @@ i {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.details {
-    padding-top: 20rem;
-    text-align: center;
-    font-size: larger;
-    color: black;
-    font-weight: bolder;
-}
 #insta {
     padding-left: 30rem;
 }
@@ -159,4 +149,110 @@ i {
     margin: 1rem!important;
     border-radius: 25%;
 }
-
+/* .details {
+    padding-top: 20rem;
+    text-align: center;
+    font-size: larger;
+    color: black;
+    font-weight: bolder;
+} */
+.details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.quickstats {
+    padding-left: 0.5rem;
+    text-align: left;
+}
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.project {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+h2 {
+    padding-left: 0.5rem;
+}
+ h3 {
+     padding-left: 0.5rem;
+}
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.image1 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic1.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image2 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic2.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image3 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic3.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image4 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic4.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image5 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic5.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image6 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic6.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image7 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic7.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.image8 {
+    height: 15rem;
+    background-size: cover;
+    width: 24%;
+    background-image: url("pic8.jpg");
+    border-color: #2c8701;
+    border-radius: 1rem;
+}
+.describe {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight:500;
+    color: #174900;
+}

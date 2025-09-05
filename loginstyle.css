@@ -162,3 +162,6 @@ a:hover {
    align-items: center;
    width: 100%;
 }
+.f1 {
+   visibility: hidden;
+}
