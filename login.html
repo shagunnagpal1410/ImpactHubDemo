@@ -11,65 +11,57 @@
 <body>
   <div class="main">
     <div class="box1">
-      <br><br>
-      <h2>Create Your Account Here!!!</h2>
+      <h2>Create Your Account Here!</h2>
+      <p class="welcome-text">Join our community of volunteers and NGOs working together to make a positive impact in the world.</p>
     </div>
     <div class="box2">
       <div class="randombox">
-        <br>
-        <a href="signin.html">Click Here! if account already exists!!!</a>
-        <br><br>
+        <a href="signin.html">Already have an account? Sign in here!</a>
       </div>
       <h1 id="signup">Sign Up for impactHub</h1>
-      <br>
 
       <!-- MAIN FORM -->
       <form class="needs-validation" novalidate>
         <div class="mb-3">
-          <label for="i1" class="form-label">Enter Your Name</label>
-          <input type="text" class="form-control" name="i1" id="i1" required minlength="2">
+          <label for="i1" class="form-label">Full Name</label>
+          <input type="text" class="form-control" name="i1" id="i1" placeholder="Enter your full name" required minlength="2">
           <div class="invalid-feedback">Please enter a valid name (at least 2 characters).</div>
         </div>
-        <br>
 
         <div class="mb-3">
-          <label for="i2" class="form-label">Enter Your Phone Number</label>
-          <input type="tel" class="form-control" name="i2" id="i2" required pattern="[0-9]{10}">
+          <label for="i2" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" name="i2" id="i2" placeholder="Enter 10-digit phone number" required pattern="[0-9]{10}">
           <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
         </div>
-        <br>
 
         <div class="mb-3">
-          <label for="i3" class="form-label">Email Id</label>
-          <input type="email" class="form-control" name="i3" id="i3" required>
+          <label for="i3" class="form-label">Email Address</label>
+          <input type="email" class="form-control" name="i3" id="i3" placeholder="Enter your email address" required>
           <div class="invalid-feedback">Please enter a valid email address.</div>
         </div>
-        <br>
 
         <div class="mb-3">
           <label for="i4" class="form-label">Password</label>
-          <input type="password" class="form-control" name="i4" id="i4" required minlength="8">
+          <input type="password" class="form-control" name="i4" id="i4" placeholder="Create a strong password" required minlength="8">
           <div class="invalid-feedback">Password must be at least 8 characters long.</div>
         </div>
-        <br>
 
         <div class="mb-3">
-          <label for="i5" class="form-label">Enter Your DOB</label>
+          <label for="i5" class="form-label">Date of Birth</label>
           <input type="date" class="form-control" name="i5" id="i5" required>
           <div class="invalid-feedback">Please enter your date of birth.</div>
         </div>
-        <br>
 
         <!-- NGO Yes/No -->
         <div class="mb-3">
-          <label class="form-label">Are you from an NGO?</label><br>
+          <label class="ngo-question">Are you from an NGO?</label>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="ngo_status" id="ngo_yes" value="yes" required>
-            <label class="form-check-label" for="ngo_yes">Yes, I'm from an NGO</label>
+            <label class="form-check-label" for="ngo_yes">Yes, I represent an NGO</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="ngo_status" id="ngo_no" value="no" required>
-            <label class="form-check-label" for="ngo_no">No, I'm not from an NGO</label>
+            <label class="form-check-label" for="ngo_no">No, I'm a volunteer</label>
           </div>
           <div class="invalid-feedback">Please select whether you are from an NGO or not.</div>
         </div>
@@ -77,34 +69,30 @@
         <!-- NGO FIELDS (HIDDEN INITIALLY) -->
         <div id="ngo_fields" style="display: none;">
           <div class="mb-3">
-            <label for="i6" class="form-label">Write About Your NGO</label>
-            <input type="text" class="form-control" name="i6" id="i6" minlength="50">
+            <label for="i6" class="form-label">About Your NGO</label>
+            <textarea class="form-control" name="i6" id="i6" rows="4" placeholder="Tell us about your NGO's mission and activities (minimum 50 characters)" minlength="50"></textarea>
             <div class="invalid-feedback">Enter minimum 50 characters.</div>
           </div>
-          <br>
 
           <div class="mb-3">
-            <label for="i7" class="form-label">Enter Permanent Address of NGO</label>
-            <input type="text" class="form-control" name="i7" id="i7">
+            <label for="i7" class="form-label">NGO Address</label>
+            <input type="text" class="form-control" name="i7" id="i7" placeholder="Enter permanent address of your NGO">
           </div>
-          <br>
 
           <div class="mb-3">
-            <label for="i8" class="form-label">Enter Domain of Interest</label>
-            <input type="text" class="form-control" name="i8" id="i8">
+            <label for="i8" class="form-label">Domain of Interest</label>
+            <input type="text" class="form-control" name="i8" id="i8" placeholder="e.g., Education, Healthcare, Environment">
           </div>
-          <br>
 
           <div class="mb-3">
-            <label for="i9" class="form-label">Enter Some Images of Your NGO</label>
+            <label for="i9" class="form-label">NGO Images</label>
             <input type="file" class="form-control" name="i9" id="i9" accept="image/*" multiple>
             <div class="invalid-feedback">Please upload at least one image.</div>
           </div>
         </div>
 
-        <br>
         <div class="d-grid">
-          <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+          <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
         </div>
       </form>
     </div>

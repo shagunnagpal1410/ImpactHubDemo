@@ -1,4 +1,4 @@
-* {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -28,7 +28,7 @@
       margin: 0;
       height: 100vh;
       width: 40%;
-      background: linear-gradient(135deg, #2E9CCA 0%, #29648A 100%);
+      background: linear-gradient(135deg, #29648A 0%, #2E9CCA 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -48,24 +48,43 @@
       opacity: 0.3;
     }
 
-    .box1 h2 {
-      font-size: 2.5rem;
+    .welcome-back {
+      font-size: 3rem;
       font-weight: bold;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
       z-index: 1;
       position: relative;
       color: white;
       margin-bottom: 2rem;
+      text-align: center;
     }
 
-    .welcome-text {
-      font-size: 1.2rem;
+    .welcome-subtitle {
+      font-size: 1.3rem;
       color: rgba(255,255,255,0.9);
       text-align: center;
       z-index: 1;
       position: relative;
       max-width: 80%;
       line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .signin-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 2rem;
+      z-index: 1;
+      position: relative;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     }
 
     .box2 {
@@ -74,21 +93,33 @@
       width: 60%;
       color: #AAABB8;
       overflow-y: auto;
-      padding: 20px;
+      padding: 40px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, #464866 0%, #25274D 100%);
+      position: relative;
+    }
+
+    .signin-container {
+      background: rgba(170, 171, 184, 0.05);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(170, 171, 184, 0.2);
+      width: 100%;
+      max-width: 450px;
+      animation: slideInUp 0.8s ease;
     }
 
     .randombox {
-      padding-right: 1rem;
-      text-align: right;
+      text-align: center;
       color: #2E9CCA;
       width: 100%;
-      align-self: flex-end;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .randombox a {
@@ -96,6 +127,7 @@
       color: #2E9CCA;
       font-weight: 500;
       transition: all 0.3s ease;
+      font-size: 0.95rem;
     }
 
     .randombox a:hover {
@@ -106,7 +138,7 @@
 
     .box2 h1 {
       color: #AAABB8;
-      margin-bottom: 30px;
+      margin-bottom: 2rem;
       text-align: center;
       width: 100%;
       font-size: 2rem;
@@ -115,16 +147,17 @@
     }
 
     .form-control {
-      width: 22rem;
+      width: 100%;
       margin: 0 auto;
       background: rgba(170, 171, 184, 0.1);
       border: 2px solid rgba(170, 171, 184, 0.3);
       color: #AAABB8;
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 1rem;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      height: 56px;
     }
 
     .form-control:focus {
@@ -144,9 +177,9 @@
       font-weight: 600;
       text-align: left;
       display: block;
-      width: 22rem;
-      margin: 0 auto 8px auto;
-      font-size: 0.95rem;
+      width: 100%;
+      margin: 0 0 12px 0;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -156,115 +189,87 @@
       border: none;
       color: white;
       font-weight: bold;
-      width: 22rem;
-      padding: 14px;
-      border-radius: 10px;
-      font-size: 1.1rem;
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 1.2rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(46, 156, 202, 0.3);
+      box-shadow: 0 6px 20px rgba(46, 156, 202, 0.3);
+      margin-top: 1rem;
     }
 
     .btn-primary:hover {
       background: linear-gradient(135deg, #29648A 0%, #2E9CCA 100%);
       color: white;
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(46, 156, 202, 0.4);
-    }
-
-    .form-check-label {
-      color: #AAABB8;
-      margin-left: 12px;
-      font-weight: 500;
-    }
-
-    .form-check {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 22rem;
-      margin: 5px auto;
-      padding: 8px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .form-check:hover {
-      background: rgba(170, 171, 184, 0.05);
-    }
-
-    .form-check-input {
-      margin-right: 12px;
-      width: 18px;
-      height: 18px;
-    }
-
-    .form-check-input:checked {
-      background-color: #2E9CCA;
-      border-color: #2E9CCA;
-    }
-
-    .form-check-input:focus {
-      border-color: #2E9CCA;
-      box-shadow: 0 0 0 0.2rem rgba(46, 156, 202, 0.25);
+      box-shadow: 0 8px 25px rgba(46, 156, 202, 0.4);
     }
 
     .invalid-feedback {
       color: #ff6b6b;
-      text-align: center;
-      width: 22rem;
-      margin: 5px auto 0 auto;
+      text-align: left;
+      width: 100%;
+      margin: 8px 0 0 0;
       font-size: 0.875rem;
     }
 
     .is-invalid {
       border-color: #ff6b6b;
+      animation: shake 0.5s ease-in-out;
     }
 
     .mb-3 {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
       width: 100%;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .d-grid {
       text-align: center;
-      width: 22rem;
-      margin: 2rem auto 0 auto;
-    }
-
-    #ngo_fields {
       width: 100%;
-      padding: 1.5rem;
-      background: rgba(37, 39, 77, 0.3);
-      border-radius: 15px;
-      margin-top: 1rem;
-      border: 1px solid rgba(170, 171, 184, 0.2);
-      backdrop-filter: blur(10px);
+      margin: 1rem 0 0 0;
     }
 
-    .ngo-question {
-      color: #AAABB8;
-      font-weight: 600;
+    .forgot-password {
       text-align: center;
-      width: 22rem;
-      margin: 0 auto 15px auto;
-      font-size: 1rem;
+      margin-top: 1.5rem;
     }
 
-    /* Custom file input styling */
-    .form-control[type="file"] {
-      padding: 10px;
-      background: rgba(170, 171, 184, 0.1);
-      border: 2px dashed rgba(170, 171, 184, 0.3);
+    .forgot-password a {
+      color: #2E9CCA;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
     }
 
-    .form-control[type="file"]:hover {
-      border-color: #2E9CCA;
-      background: rgba(170, 171, 184, 0.15);
+    .forgot-password a:hover {
+      color: #29648A;
+      text-decoration: underline;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+      color: rgba(170, 171, 184, 0.5);
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(170, 171, 184, 0.3);
+    }
+
+    .divider span {
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     /* Responsive design */
@@ -275,47 +280,90 @@
 
       .box1 {
         width: 100%;
-        height: 30vh;
+        height: 35vh;
       }
 
-      .box1 h2 {
-        font-size: 1.8rem;
+      .welcome-back {
+        font-size: 2rem;
+      }
+
+      .welcome-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .signin-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
       }
 
       .box2 {
         width: 100%;
-        height: 70vh;
+        height: 65vh;
+        padding: 20px;
       }
 
-      .form-control,
-      .form-label,
-      .btn-primary,
-      .form-check,
-      .invalid-feedback,
-      .d-grid {
-        width: 90%;
-        max-width: 400px;
+      .signin-container {
+        padding: 2rem;
+        margin: 0;
+        border-radius: 15px;
+      }
+
+      .box2 h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
       }
     }
 
-    /* Animation for form elements */
-    .mb-3 {
-      opacity: 0;
-      animation: slideInUp 0.6s ease forwards;
+    @media (max-width: 480px) {
+      .signin-container {
+        padding: 1.5rem;
+      }
+
+      .form-control {
+        padding: 14px 16px;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        padding: 14px;
+        font-size: 1rem;
+      }
     }
 
-    .mb-3:nth-child(1) { animation-delay: 0.1s; }
-    .mb-3:nth-child(2) { animation-delay: 0.2s; }
-    .mb-3:nth-child(3) { animation-delay: 0.3s; }
-    .mb-3:nth-child(4) { animation-delay: 0.4s; }
-    .mb-3:nth-child(5) { animation-delay: 0.5s; }
-    .mb-3:nth-child(6) { animation-delay: 0.6s; }
-    .mb-3:nth-child(7) { animation-delay: 0.7s; }
-
+    /* Animations */
     @keyframes slideInUp {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    .mb-3 {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .mb-3:nth-child(1) { animation-delay: 0.2s; }
+    .mb-3:nth-child(2) { animation-delay: 0.4s; }
+    .mb-3:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
       to {
         opacity: 1;

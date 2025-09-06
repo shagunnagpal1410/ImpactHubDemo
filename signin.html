@@ -6,46 +6,69 @@
   <title>Sign-In</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="loginstyle.css">
+  <link rel="stylesheet" href="signin.css">
 </head>
 <body>
   <div class="main">
     <div class="box1">
-      <br><br>
+      <div class="signin-icon">👋</div>
+      <h2 class="welcome-back">Welcome Back!</h2>
+      <p class="welcome-subtitle">Sign in to continue your journey of making a positive impact in the world.</p>
     </div>
+    
     <div class="box2">
-      <div class="randombox">
-        <br>
-        <br><br>
+      <div class="signin-container">
+        <div class="randombox">
+          <a href="login.html">Don't have an account? Create one here!</a>
+        </div>
+        
+        <h1 id="signin">Sign In to impactHub</h1>
+
+        <!-- MAIN FORM -->
+        <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="i10" class="form-label">Username</label>
+            <input type="text" class="form-control" name="i10" id="i10" placeholder="Enter your username" required minlength="2">
+            <div class="invalid-feedback">Please enter a valid username</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="i11" class="form-label">Password</label>
+            <input type="password" class="form-control" name="i11" id="i11" placeholder="Enter your password" required minlength="8">
+            <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+          </div>
+
+          <div class="forgot-password">
+            <a href="#" onclick="alert('Forgot password functionality would be implemented here')">Forgot your password?</a>
+          </div>
+
+          <div class="divider">
+            <span>or continue with</span>
+          </div>
+
+          <div class="d-grid">
+            <button type="button" class="btn btn-outline-light" onclick="alert('Social login would be implemented here')" style="
+              background: rgba(170, 171, 184, 0.1);
+              border: 2px solid rgba(170, 171, 184, 0.3);
+              color: #AAABB8;
+              border-radius: 12px;
+              padding: 12px;
+              transition: all 0.3s ease;
+            " onmouseover="this.style.background='rgba(170, 171, 184, 0.2)'" onmouseout="this.style.background='rgba(170, 171, 184, 0.1)'">
+              🌐 Sign in with Google
+            </button>
+          </div>
+        </form>
       </div>
-      <h1 id="signup">Sign In here for impactHub</h1>
-      <br>
-
-      <!-- MAIN FORM -->
-      <form class="needs-validation" novalidate>
-        <div class="mb-3">
-          <label for="i10" class="form-label">Enter Your Username</label>
-          <input type="text" class="form-control" name="i10" id="i10" required minlength="2">
-          <div class="invalid-feedback">Please enter a valid Username</div>
-        </div>
-        <br>
-
-        <div class="mb-3">
-          <label for="i11" class="form-label">Password</label>
-          <input type="password" class="form-control" name="i11" id="i11" required minlength="8">
-          <div class="invalid-feedback">Password must be at least 8 characters long.</div>
-        </div>
-        <br>
-        <div class="d-grid">
-          <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
-        </div>
-      </form>
     </div>
   </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="logincode.js"></script>
 
   <script>
     // Bootstrap form validation
@@ -58,12 +81,30 @@
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
+            } else {
+              event.preventDefault();
+              alert('Sign in functionality would be implemented here. Redirecting to dashboard...');
             }
             form.classList.add('was-validated');
           }, false);
         });
       }, false);
     })();
+
+    // Add some interactive feedback
+    document.addEventListener('DOMContentLoaded', function() {
+      const inputs = document.querySelectorAll('.form-control');
+      
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.parentElement.style.transform = 'scale(1.02)';
+        });
+        
+        input.addEventListener('blur', function() {
+          this.parentElement.style.transform = 'scale(1)';
+        });
+      });
+    });
   </script>
 </body>
 </html>

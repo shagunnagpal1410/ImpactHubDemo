@@ -1,4 +1,4 @@
- // Bootstrap form validation
+// Bootstrap form validation
     (function() {
       'use strict';
       window.addEventListener('load', function() {
