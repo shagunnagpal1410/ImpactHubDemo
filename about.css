@@ -1,56 +1,306 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #cbc9e3;
-}
-.main {
-    text-align: center;
-}
-.scroll-container {
-  overflow: hidden;
-  width: 100%;
-}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.scroll-content {
-  display: flex;
-  animation: scroll 30s linear infinite;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #25274D 0%, #464866 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+            color: #AAABB8;
+        }
 
-.minibox {
-  width: 25%;
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-  margin-right: 10px;
-  border: 0.25rem solid #7A85C1;
-  border-radius: 1rem;
-}
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%); /* shift full width of original set */
-  }
-}
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-.box2 {
-    text-align: left;
-}
-h1 {
-    color: #1A2A80;
-}
-h2 {
-    color: #1A2A80;
-}
-p {
-    color: #3B38A0;
-}
-ul {
-    color: #3B38A0;
-}
-li {
-    color: #3B38A0;
-}
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #2E9CCA, #2964BA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(46, 156, 202, 0.3);
+        }
+
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: #AAABB8;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .scroll-container {
+            overflow: hidden;
+            width: 100%;
+            margin-bottom: 4rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-content {
+            display: flex;
+            animation: scroll 40s linear infinite;
+        }
+
+        .minibox {
+            width: 280px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            margin-right: 15px;
+            border: 3px solid #2E9CCA;
+            border-radius: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .minibox::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(46, 156, 202, 0.2), rgba(41, 100, 186, 0.2));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .minibox:hover::before {
+            opacity: 1;
+        }
+
+        .minibox:hover {
+            transform: translateY(-5px);
+            border-color: #2964BA;
+            box-shadow: 0 15px 30px rgba(46, 156, 202, 0.4);
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .content-section {
+            background: rgba(37, 39, 77, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(170, 171, 184, 0.1);
+        }
+
+        .intro-text {
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #AAABB8;
+            font-weight: 300;
+            line-height: 1.8;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(46, 156, 202, 0.1), rgba(41, 100, 186, 0.1));
+            border-radius: 1.5rem;
+            border-left: 4px solid #2E9CCA;
+        }
+
+        .intro-text strong {
+            color: #2E9CCA;
+            font-weight: 600;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-card {
+            background: linear-gradient(135deg, rgba(70, 72, 102, 0.6), rgba(37, 39, 77, 0.6));
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            border: 1px solid rgba(46, 156, 202, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2E9CCA, #2964BA);
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(46, 156, 202, 0.2);
+            border-color: rgba(46, 156, 202, 0.4);
+        }
+
+        h2 {
+            color: #2E9CCA;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #2E9CCA, #2964BA);
+            border-radius: 2px;
+        }
+
+        p {
+            color: #AAABB8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            color: #AAABB8;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #2E9CCA;
+            font-size: 0.8rem;
+            top: 0.2rem;
+        }
+
+        strong {
+            color: #2964BA;
+            font-weight: 600;
+        }
+
+        em {
+            color: #2E9CCA;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2E9CCA, #2964BA);
+            border-radius: 2rem;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+            box-shadow: 0 8px 32px rgba(46, 156, 202, 0.3);
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section h2::after {
+            background: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .minibox {
+                width: 250px;
+            }
+            
+            .content-section {
+                padding: 2rem;
+            }
+            
+            .section-card {
+                padding: 2rem;
+            }
+        }
+
+        /* Smooth scroll animation pause on hover */
+        .scroll-container:hover .scroll-content {
+            animation-play-state: paused;
+        }
+
+        /* Add subtle animations */
+        .section-card, .content-section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
