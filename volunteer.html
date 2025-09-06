@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard - impactHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="volunteer.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Welcome Header -->
+        <div class="welcome-header">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>Track your volunteer journey and discover new opportunities to make an impact</p>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Profile Section -->
+            <div class="card">
+                <h2>Your Profile</h2>
+                <div class="profile-avatar" id="profileAvatar">JD</div>
+                <div class="profile-info">
+                    <h3 id="profileName">John Doe</h3>
+                    <p id="profileEmail">john.doe@example.com</p>
+                    <p id="profilePhone">+1 234-567-8900</p>
+                    <p id="profileLocation">📍 Current Location</p>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <div class="stat-number" id="eventsCompleted">15</div>
+                        <div class="stat-label">Events Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="totalHours">120</div>
+                        <div class="stat-label">Total Hours</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="impactPoints">850</div>
+                        <div class="stat-label">Impact Points</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="card">
+                <h2>🏆 Leaderboard</h2>
+                <div id="leaderboard">
+                    <div class="leaderboard-item">
+                        <div class="rank">1</div>
+                        <div class="volunteer-avatar">AS</div>
+                        <div class="volunteer-info">
+                            <div class="volunteer-name">Alex Smith</div>
+                            <div class="volunteer-points">1,250 points</div>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank">2</div>
+                        <div class="volunteer-avatar">MJ</div>
+                        <div class="volunteer-info">
+                            <div class="volunteer-name">Maria Johnson</div>
+                            <div class="volunteer-points">1,100 points</div>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank">3</div>
+                        <div class="volunteer-avatar">JD</div>
+                        <div class="volunteer-info">
+                            <div class="volunteer-name">You (John Doe)</div>
+                            <div class="volunteer-points">850 points</div>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank">4</div>
+                        <div class="volunteer-avatar">RW</div>
+                        <div class="volunteer-info">
+                            <div class="volunteer-name">Robert Wilson</div>
+                            <div class="volunteer-points">720 points</div>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank">5</div>
+                        <div class="volunteer-avatar">LB</div>
+                        <div class="volunteer-info">
+                            <div class="volunteer-name">Lisa Brown</div>
+                            <div class="volunteer-points">680 points</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location & Domain Selection -->
+            <div class="card">
+                <h2>📍 Location & Preferences</h2>
+                
+                <label for="locationInput" style="color: #AAABB8; font-weight: 600; margin-bottom: 0.5rem; display: block;">Search Your Location:</label>
+                <input type="text" id="locationInput" class="form-control" placeholder="Enter your city or address">
+                <button onclick="getCurrentLocation()" class="btn btn-primary w-100">🌍 Use Current Location</button>
+                
+                <div id="locationDisplay" class="location-display" style="display: none;">
+                    <strong>📍 Current Location:</strong>
+                    <div id="currentLocation">Detecting location...</div>
+                </div>
+
+                <hr style="border-color: rgba(170, 171, 184, 0.2); margin: 2rem 0;">
+
+                <label style="color: #AAABB8; font-weight: 600; margin-bottom: 1rem; display: block;">Select Your Preferred Domains:</label>
+                <div class="domain-tags">
+                    <div class="domain-tag" onclick="toggleDomain(this)">Education</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Healthcare</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Environment</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Poverty Alleviation</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Animal Welfare</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Disaster Relief</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Community Development</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Elderly Care</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Child Welfare</div>
+                    <div class="domain-tag" onclick="toggleDomain(this)">Women Empowerment</div>
+                </div>
+                
+                <button onclick="savePreferences()" class="btn btn-primary w-100 mt-3">💾 Save Preferences</button>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="card">
+                <h2>📊 Quick Stats</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="stat">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">This Month</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Upcoming</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">NGOs Helped</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat">
+                            <div class="stat-number">3rd</div>
+                            <div class="stat-label">Rank</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <div class="events-container">
+            <!-- Event History -->
+            <div class="card">
+                <h2>📚 Event History</h2>
+                <div id="eventHistory">
+                    <div class="event-item">
+                        <div class="event-title">Beach Cleanup Drive</div>
+                        <div class="event-date">📅 March 15, 2025</div>
+                        <div class="event-description">Organized coastal cleanup removing 50kg of plastic waste</div>
+                        <span class="event-status status-completed">Completed</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Food Distribution</div>
+                        <div class="event-date">📅 March 8, 2025</div>
+                        <div class="event-description">Distributed meals to 200+ homeless individuals</div>
+                        <span class="event-status status-completed">Completed</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Tree Plantation Drive</div>
+                        <div class="event-date">📅 February 28, 2025</div>
+                        <div class="event-description">Planted 100 saplings in local community park</div>
+                        <span class="event-status status-completed">Completed</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Education Workshop</div>
+                        <div class="event-date">📅 February 20, 2025</div>
+                        <div class="event-description">Taught basic computer skills to 30 children</div>
+                        <span class="event-status status-completed">Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="card">
+                <h2>🚀 Upcoming Events</h2>
+                <div id="upcomingEvents">
+                    <div class="event-item">
+                        <div class="event-title">Blood Donation Camp</div>
+                        <div class="event-date">📅 September 15, 2025</div>
+                        <div class="event-description">Organize blood donation drive at city center</div>
+                        <span class="event-status status-registered">Registered</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Senior Citizen Care</div>
+                        <div class="event-date">📅 September 22, 2025</div>
+                        <div class="event-description">Spend time with elderly at local care home</div>
+                        <span class="event-status status-registered">Registered</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Library Book Drive</div>
+                        <div class="event-date">📅 October 5, 2025</div>
+                        <div class="event-description">Collect and organize books for rural schools</div>
+                        <span class="event-status status-upcoming">Available</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Community Kitchen</div>
+                        <div class="event-date">📅 October 12, 2025</div>
+                        <div class="event-description">Help prepare meals for local shelter</div>
+                        <span class="event-status status-upcoming">Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="volunteer.js"></script>
+</body>
+</html>
